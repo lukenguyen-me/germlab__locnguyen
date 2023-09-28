@@ -15,6 +15,22 @@ const Socials = [
   },
   { link: 'mailto://phucloc8697@gmail.com', name: 'phucloc8697@gmail.com', icon: 'bx bx-envelope' },
 ]
+
+const Characters = [
+  {
+    first: 'L',
+    text: 'evel-headed',
+  },
+  {
+    first: 'O',
+    text: 'wnership',
+  },
+  {
+    first: 'C',
+    text: 'ritical Thinking',
+  },
+]
+
 function SectionIntro() {
   return (
     <Section className="bg-linen pt-40">
@@ -25,7 +41,9 @@ function SectionIntro() {
               Hey There,
               <br /> I{"'"}m Luke
             </h1>
-            <p className="my-4">whose native fullname is Loc Nguyen</p>
+            <p className="my-4 font-light">
+              whose native fullname is <strong className="font-medium">Loc Nguyen</strong>
+            </p>
           </div>
           <div className="flex items-center gap-4 pb-10">
             <strong className="text-7xl text-accent">5</strong>
@@ -40,7 +58,7 @@ function SectionIntro() {
           <Image
             width={500}
             height={500}
-            style={{ maxWidth: 'unset', marginTop: -200 }}
+            style={{ maxWidth: 'unset' }}
             alt="Portrait"
             src="/images/portrait.png"
           />
@@ -61,27 +79,23 @@ function SectionIntro() {
               </li>
             ))}
           </ul>
-          <div className="flex justify-end gap-4 pb-10">
-            <div
-              className={classNames(
-                'flex flex-col items-center bg-white rounded-lg transition-all',
-                'text-lg font-light translate-y-1',
-                'hover:shadow-xl hover:text-accent hover:font-medium p-4 hover:translate-y-0 hover:bg-white',
-              )}
-            >
-              <i className="bx bx-user-check text-4xl" />
-              <span>Ownership</span>
-            </div>
-            <div
-              className={classNames(
-                'flex flex-col items-center bg-white rounded-lg transition-all',
-                'text-lg font-light translate-y-1',
-                'hover:shadow-xl hover:text-accent hover:font-medium p-4 hover:translate-y-0 hover:bg-white',
-              )}
-            >
-              <i className="bx bx-bulb text-4xl" />
-              <span>Critical Thinking</span>
-            </div>
+          <div className="flex flex-col justify-end pb-10">
+            {Characters.map((e, i) => (
+              <div
+                key={i}
+                className={classNames(
+                  'flex items-center justify-between gap-4 rounded-lg transition-all',
+                  'translate-y-1 p-4',
+                  'hover:shadow-xl hover:text-accent hover:translate-y-0 hover:bg-white',
+                )}
+              >
+                <div className="flex items-end gap-2">
+                  <strong className="text-xl">{e.first}</strong>
+                  <span className="font-light">{e.text}</span>
+                </div>
+                <i className={classNames('bx bx-check text-2xl')} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

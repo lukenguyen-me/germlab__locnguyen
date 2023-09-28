@@ -46,7 +46,7 @@ const SkillBackend = [
   {
     name: 'NodeJS',
     image: '/images/ic_nodejs.svg',
-    desc: 'Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser. ',
+    desc: 'Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser.',
     link: 'https://nodejs.org/',
   },
   {
@@ -75,38 +75,60 @@ const SkillBackend = [
   },
 ]
 
+const SkillAWS = [
+  {
+    name: 'Lambda',
+    image: '/images/ic_awslambda.svg',
+    desc: 'AWS Lambda is an event-driven, serverless computing platform provided by Amazon as a part of Amazon Web Services.',
+    link: 'https://aws.amazon.com/lambda/',
+  },
+  {
+    name: 'S3',
+    image: '/images/ic_awss3.svg',
+    desc: 'Amazon S3 or Amazon Simple Storage Service is a service offered by Amazon Web Services that provides object storage through a web service interface.',
+    link: 'https://aws.amazon.com/s3/',
+  },
+  {
+    name: 'EC2',
+    image: '/images/ic_awsec2.svg',
+    desc: "Amazon Elastic Compute Cloud is a part of Amazon.com's cloud-computing platform, Amazon Web Services, that allows users to rent virtual computers on which to run their own computer applications.",
+    link: 'https://aws.amazon.com/ec2/',
+  },
+]
+
 const Groups = [
   {
     name: 'Frontend',
-    desc: '5+ years',
+    desc: '5 years of experience',
     icon: 'bx-tv',
     items: SkillFrontend,
-    color: 'green-400',
+    color: 'bg-green-400',
   },
-  {
-    name: 'Backend',
-    desc: '3 years',
-    icon: 'bx-cog',
-    items: SkillBackend,
-    color: 'orange-500',
-  },
-  {
-    name: 'AWS Services',
-    desc: 'Developer Associate Certified',
-    icon: 'bxl-aws bx-lg',
-    items: SkillFrontend,
-    color: 'yellow-500',
-  },
+  // {
+  //   name: 'Backend',
+  //   desc: '3 years of experience',
+  //   icon: 'bx-cog',
+  //   items: SkillBackend,
+  //   color: 'bg-orange-500',
+  // },
+  // {
+  //   name: 'AWS Services',
+  //   desc: 'Developer Associate Certified',
+  //   icon: 'bxl-aws bx-lg',
+  //   items: SkillAWS,
+  //   color: 'bg-yellow-500',
+  // },
 ]
 function SectionSkill() {
   return (
     <Section className="bg-white py-40">
       <h2 className="text-7xl font-medium text-center mb-40">My Skills</h2>
-      <div className="w-full grid grid-cols-3 items-center gap-x-20 gap-y-10">
+      <div className="w-full grid grid-cols-12 items-center gap-x-20 gap-y-10">
         {Groups.map((group) => (
           <React.Fragment key={group.name}>
             <div
               className={classNames(
+                'col-span-12 md:col-span-6 xl:col-span-5',
                 'flex items-center gap-8 transition-all translate-y-2 p-10',
                 'text-center rounded-3xl border-2 border-slate-200 bg-gray-50',
                 'hover:shadow-lg hover:translate-y-0 hover:bg-white',
@@ -115,17 +137,22 @@ function SectionSkill() {
               <div
                 className={classNames(
                   'flex items-center justify-center rounded-full w-20 h-20',
-                  `bg-${group.color}`,
+                  group.color,
                 )}
               >
                 <i className={classNames('bx bx-md text-white', group.icon)} />
               </div>
               <div className="text-left">
                 <h3 className="text-3xl font-semibold">{group.name}</h3>
-                <span className="text-secondary">{group.desc}</span>
+                <span className="text-lg text-secondary">{group.desc}</span>
               </div>
             </div>
-            <div className="flex flex-1 flex-wrap col-span-2 gap-x-10">
+            <div
+              className={classNames(
+                'col-span-12 md:col-span-6 xl:col-span-7',
+                'w-full flex flex-wrap gap-x-10',
+              )}
+            >
               {group.items.map((e) => (
                 <a
                   key={e.name}
