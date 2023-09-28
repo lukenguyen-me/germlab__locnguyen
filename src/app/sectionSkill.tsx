@@ -104,53 +104,54 @@ const Groups = [
     items: SkillFrontend,
     color: 'bg-green-400',
   },
-  // {
-  //   name: 'Backend',
-  //   desc: '3 years of experience',
-  //   icon: 'bx-cog',
-  //   items: SkillBackend,
-  //   color: 'bg-orange-500',
-  // },
-  // {
-  //   name: 'AWS Services',
-  //   desc: 'Developer Associate Certified',
-  //   icon: 'bxl-aws bx-lg',
-  //   items: SkillAWS,
-  //   color: 'bg-yellow-500',
-  // },
+  {
+    name: 'Backend',
+    desc: '3 years of experience',
+    icon: 'bx-cog',
+    items: SkillBackend,
+    color: 'bg-orange-500',
+  },
+  {
+    name: 'AWS Services',
+    desc: 'Developer Associate Certified',
+    icon: 'bxl-aws',
+    items: SkillAWS,
+    color: 'bg-yellow-500',
+  },
 ]
 function SectionSkill() {
   return (
-    <Section className="bg-white py-40">
-      <h2 className="text-7xl font-medium text-center mb-40">My Skills</h2>
-      <div className="w-full grid grid-cols-12 items-center gap-x-20 gap-y-10">
+    <Section className="py-10 md:py-40">
+      <h2 className="text-4xl md:text-7xl font-medium text-center mb-10 md:40">My Skills</h2>
+      <div className="w-full grid grid-cols-1 md:grid-cols-12 items-center gap-x-20 gap-y-10">
         {Groups.map((group) => (
           <React.Fragment key={group.name}>
             <div
               className={classNames(
-                'col-span-12 md:col-span-6 xl:col-span-5',
-                'flex items-center gap-8 transition-all translate-y-2 p-10',
+                'col-span-1 md:col-span-6 xl:col-span-5',
+                'flex items-center gap-8 transition-all translate-y-2 p-4 lg:p-10',
                 'text-center rounded-3xl border-2 border-slate-200 bg-gray-50',
                 'hover:shadow-lg hover:translate-y-0 hover:bg-white',
               )}
             >
               <div
                 className={classNames(
-                  'flex items-center justify-center rounded-full w-20 h-20',
+                  'flex items-center justify-center rounded-full',
+                  'w-10 h-10 md:w-16 md:h-16  lg:w-20 lg:h-20',
                   group.color,
                 )}
               >
-                <i className={classNames('bx bx-md text-white', group.icon)} />
+                <i className={classNames('bx md:text-4xl text-white', group.icon)} />
               </div>
               <div className="text-left">
-                <h3 className="text-3xl font-semibold">{group.name}</h3>
-                <span className="text-lg text-secondary">{group.desc}</span>
+                <h3 className="text-xl md:text-3xl font-semibold">{group.name}</h3>
+                <span className="md:text-lg text-secondary">{group.desc}</span>
               </div>
             </div>
             <div
               className={classNames(
-                'col-span-12 md:col-span-6 xl:col-span-7',
-                'w-full flex flex-wrap gap-x-10',
+                'col-span-1 md:col-span-6 xl:col-span-7',
+                'w-full flex flex-wrap justify-center md:justify-start gap-x-10',
               )}
             >
               {group.items.map((e) => (

@@ -31,13 +31,24 @@ const Characters = [
   },
 ]
 
+const Experience = () => (
+  <div className="flex items-center gap-4">
+    <strong className="text-7xl text-accent">5</strong>
+    <div className="text-2xl font-light">
+      YEARS
+      <br />
+      EXPERIENCE
+    </div>
+  </div>
+)
+
 function SectionIntro() {
   return (
-    <Section className="bg-linen pt-40">
-      <div className="flex gap-10">
+    <Section className="bg-linen pt-10 md:pt-40 overflow-hidden">
+      <div className="flex flex-col md:flex-row gap-10">
         <div className="flex flex-col justify-between">
           <div>
-            <h1 className="text-7xl font-semibold" style={{ lineHeight: 1.2 }}>
+            <h1 className="text-5xl md:text-7xl font-semibold" style={{ lineHeight: 1.2 }}>
               Hey There,
               <br /> I{"'"}m Luke
             </h1>
@@ -45,26 +56,32 @@ function SectionIntro() {
               whose native fullname is <strong className="font-medium">Loc Nguyen</strong>
             </p>
           </div>
-          <div className="flex items-center gap-4 pb-10">
-            <strong className="text-7xl text-accent">5</strong>
-            <div className="text-2xl font-light">
-              YEARS
-              <br />
-              EXPERIENCE
-            </div>
+          <div className="hidden md:block pb-10">
+            <Experience />
           </div>
         </div>
-        <div className="max-w-sm overflow-visible flex items-end justify-center">
+        <div className="max-w-xs overflow-visible flex items-end justify-center relative">
+          <Image
+            width={600}
+            height={600}
+            className="absolute max-w-none object-cover"
+            style={{ top: -50 }}
+            alt="Portrait"
+            src="/images/bg_brush.svg"
+          />
           <Image
             width={500}
             height={500}
             style={{ maxWidth: 'unset' }}
             alt="Portrait"
             src="/images/portrait.png"
+            className="relative"
           />
         </div>
-
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col justify-between gap-4 md:gap-20">
+          <div className="block md:hidden">
+            <Experience />
+          </div>
           <ul className="pl-4">
             {Socials.map((e) => (
               <li key={e.link} className="flex items-center gap-2">
@@ -79,7 +96,7 @@ function SectionIntro() {
               </li>
             ))}
           </ul>
-          <div className="flex flex-col justify-end pb-10">
+          <div className="flex flex-col justify-end pl-10 pb-4">
             {Characters.map((e, i) => (
               <div
                 key={i}
