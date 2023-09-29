@@ -1,0 +1,14 @@
+.job {
+  position: relative;
+
+  .dot {
+    position: absolute;
+    left: -16px;
+    padding: 5px;
+    > div {
+      width: 15px;
+      height: 15px;
+      border-radius: 20px;
+    }
+  }
+}

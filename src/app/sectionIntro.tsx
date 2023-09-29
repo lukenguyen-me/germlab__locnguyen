@@ -64,8 +64,7 @@ function SectionIntro() {
           <Image
             width={600}
             height={600}
-            className="absolute max-w-none object-cover"
-            style={{ top: -50 }}
+            className="absolute max-w-none top-0 object-cover"
             alt="Portrait"
             src="/images/bg_brush.svg"
           />
@@ -96,7 +95,7 @@ function SectionIntro() {
               </li>
             ))}
           </ul>
-          <div className="flex flex-col justify-end pl-10 pb-4">
+          <div className="flex flex-col justify-end pl-0 md:pl-10 pb-4">
             {Characters.map((e, i) => (
               <div
                 key={i}
