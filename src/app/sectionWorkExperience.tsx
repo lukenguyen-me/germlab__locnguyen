@@ -6,8 +6,8 @@ import styles from './styles.module.scss'
 
 function SectionWorkExperience() {
   return (
-    <Section className="bg-linen py-10 md:py-40">
-      <h2 className="text-4xl md:text-5xl font-medium text-center mb-10 md:mb-40">
+    <Section className="bg-main py-10 md:py-20">
+      <h2 className="text-4xl md:text-5xl font-medium text-center mb-10 md:mb-20">
         My Work Experience
       </h2>
       <div className="flex flex-col">
@@ -25,7 +25,7 @@ function SectionWorkExperience() {
           >
             <div
               className={classNames(
-                'bg-linen border-2 border-dashed border-secondary rounded-full',
+                'bg-main border-2 border-dashed border-secondary rounded-full',
                 styles.dot,
               )}
             >
@@ -66,7 +66,7 @@ function SectionWorkExperience() {
           >
             <div
               className={classNames(
-                'bg-linen border-2 border-dashed border-secondary rounded-full',
+                'bg-main border-2 border-dashed border-secondary rounded-full',
                 styles.dot,
               )}
             >
@@ -115,7 +115,7 @@ function SectionWorkExperience() {
           >
             <div
               className={classNames(
-                'bg-linen border-2 border-dashed border-secondary rounded-full',
+                'bg-main border-2 border-dashed border-secondary rounded-full',
                 styles.dot,
               )}
             >
@@ -166,7 +166,7 @@ function SectionWorkExperience() {
           >
             <div
               className={classNames(
-                'bg-linen border-2 border-dashed border-secondary rounded-full',
+                'bg-main border-2 border-dashed border-secondary rounded-full',
                 styles.dot,
               )}
             >

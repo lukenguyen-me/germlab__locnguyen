@@ -44,8 +44,8 @@ const Experience = () => (
 
 function SectionIntro() {
   return (
-    <Section className="bg-linen pt-10 md:pt-40 overflow-hidden">
-      <div className="flex flex-col md:flex-row gap-10">
+    <Section className="bg-main pt-10 md:pt-20 overflow-hidden">
+      <div className="flex flex-col md:flex-row md:justify-between gap-10">
         <div className="flex flex-col justify-between">
           <div>
             <h1 className="text-5xl md:text-7xl font-semibold" style={{ lineHeight: 1.2 }}>
@@ -77,11 +77,29 @@ function SectionIntro() {
             className="relative"
           />
         </div>
-        <div className="flex flex-col justify-between gap-4 md:gap-20">
+        <div className="flex flex-col justify-end gap-8 md:gap-40">
           <div className="block md:hidden">
             <Experience />
           </div>
-          <ul className="pl-4">
+          <div className="flex flex-col justify-end pl-0 md:pl-10">
+            {Characters.map((e, i) => (
+              <div
+                key={i}
+                className={classNames(
+                  'flex items-center justify-between gap-4 rounded-lg transition-all',
+                  'translate-y-1 px-4 py-0 md:py-2',
+                  'hover:shadow-xl hover:text-accent hover:translate-y-0 hover:bg-white',
+                )}
+              >
+                <div className="flex items-end gap-2">
+                  <strong className="text-xl">{e.first}</strong>
+                  <span className="font-light">{e.text}</span>
+                </div>
+                <i className={classNames('bx bx-check text-2xl')} />
+              </div>
+            ))}
+          </div>
+          <ul className="pl-4 pb-8">
             {Socials.map((e) => (
               <li key={e.link} className="flex items-center gap-2">
                 <i className={e.icon} />
@@ -95,24 +113,6 @@ function SectionIntro() {
               </li>
             ))}
           </ul>
-          <div className="flex flex-col justify-end pl-0 md:pl-10 pb-4">
-            {Characters.map((e, i) => (
-              <div
-                key={i}
-                className={classNames(
-                  'flex items-center justify-between gap-4 rounded-lg transition-all',
-                  'translate-y-1 p-4',
-                  'hover:shadow-xl hover:text-accent hover:translate-y-0 hover:bg-white',
-                )}
-              >
-                <div className="flex items-end gap-2">
-                  <strong className="text-xl">{e.first}</strong>
-                  <span className="font-light">{e.text}</span>
-                </div>
-                <i className={classNames('bx bx-check text-2xl')} />
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </Section>

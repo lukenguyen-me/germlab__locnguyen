@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { fontCaros } from '@/fonts'
-import './globals.css'
 import classNames from 'classnames'
+import 'animate.css'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Loc Nguyen Porfolio',

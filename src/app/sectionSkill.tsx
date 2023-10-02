@@ -121,8 +121,8 @@ const Groups = [
 ]
 function SectionSkill() {
   return (
-    <Section className="py-10 md:py-40">
-      <h2 className="text-4xl md:text-5xl font-medium text-center mb-10 md:mb-40">My Skills</h2>
+    <Section className="py-10 md:py-20">
+      <h2 className="text-4xl md:text-5xl font-medium text-center mb-10 md:mb-20">My Skills</h2>
       <div className="w-full grid grid-cols-1 md:grid-cols-12 items-center gap-x-20 gap-y-10">
         {Groups.map((group) => (
           <React.Fragment key={group.name}>

@@ -10,7 +10,7 @@ function Section(props: SectionProps) {
   const { className, children } = props
   return (
     <section className={classNames(className)}>
-      <div className="max-w-7xl w-full px-10 xl:px-0 mx-auto">{children}</div>
+      <div className="max-w-7xl w-full px-10 xl:px-4 2xl:px-0 mx-auto">{children}</div>
     </section>
   )
 }
