@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { fontCaros } from '@/fonts'
 import classNames from 'classnames'
-import 'animate.css'
 import './globals.css'
 
 export const metadata: Metadata = {
