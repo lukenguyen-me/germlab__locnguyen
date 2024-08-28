@@ -4,13 +4,13 @@ import Image from 'next/image'
 
 const Socials = [
   {
-    link: 'https://github.com/phucloc8697',
-    name: 'https://github.com/phucloc8697',
+    link: 'https://github.com/lukenguyen-me',
+    name: 'https://github.com/lukenguyen-me',
     icon: 'bx bxl-github',
   },
   {
-    link: 'https://www.linkedin.com/in/locnguyen97/',
-    name: 'https://www.linkedin.com/in/locnguyen97/',
+    link: 'https://www.linkedin.com/in/lukenguyen-me/',
+    name: 'https://www.linkedin.com/in/lukenguyen-me/',
     icon: 'bx bxl-linkedin-square',
   },
   { link: 'mailto://phucloc8697@gmail.com', name: 'phucloc8697@gmail.com', icon: 'bx bx-envelope' },
