@@ -1,6 +1,4 @@
 import Section from '@/components/section'
-import classNames from 'classnames'
-import Image from 'next/image'
 import React from 'react'
 
 const Contacts = [

@@ -1,5 +1,5 @@
 import Section from '@/components/section'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import Image from 'next/image'
 
 const Socials = [
@@ -33,7 +33,7 @@ const Characters = [
 
 const Experience = () => (
   <div className="flex items-center gap-4">
-    <strong className="text-7xl text-accent">5</strong>
+    <strong className="text-7xl text-info">6+</strong>
     <div className="text-2xl font-light">
       YEARS
       <br />
@@ -85,17 +85,17 @@ function SectionIntro() {
             {Characters.map((e, i) => (
               <div
                 key={i}
-                className={classNames(
+                className={clsx(
                   'flex items-center justify-between gap-4 rounded-lg transition-all',
                   'translate-y-1 px-4 py-0 md:py-2',
-                  'hover:shadow-xl hover:text-accent hover:translate-y-0 hover:bg-white',
+                  'hover:shadow-xl hover:text-muted-foreground hover:translate-y-0 hover:bg-white',
                 )}
               >
                 <div className="flex items-end gap-2">
                   <strong className="text-xl">{e.first}</strong>
                   <span className="font-light">{e.text}</span>
                 </div>
-                <i className={classNames('bx bx-check text-2xl')} />
+                <i className={clsx('bx bx-check text-2xl')} />
               </div>
             ))}
           </div>
@@ -104,7 +104,7 @@ function SectionIntro() {
               <li key={e.link} className="flex items-center gap-2">
                 <i className={e.icon} />
                 <a
-                  className="text-sm transition-all text-accent hover:underline"
+                  className="text-sm transition-all text-muted-foreground hover:underline"
                   target="_blank"
                   href={e.link}
                 >

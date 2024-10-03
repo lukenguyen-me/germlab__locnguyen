@@ -1,8 +1,6 @@
 import Section from '@/components/section'
-import classNames from 'classnames'
-import Image from 'next/image'
+import clsx from 'clsx'
 import React from 'react'
-import styles from './styles.module.scss'
 
 function SectionWorkExperience() {
   return (
@@ -17,16 +15,16 @@ function SectionWorkExperience() {
             <div>Dec 2022 - Now</div>
           </div>
           <div
-            className={classNames(
+            className={clsx(
               'col-span-3 md:col-span-2 flex flex-col gap-4 pl-10 md:pl-20 pb-20',
               'border-dashed border-l-2 border-secondary',
-              styles.job,
+              'relative',
             )}
           >
             <div
-              className={classNames(
+              className={clsx(
                 'bg-main border-2 border-dashed border-secondary rounded-full',
-                styles.dot,
+                'absolute -left-4 p-2',
               )}
             >
               <div className="bg-yellow-500" />
@@ -36,10 +34,8 @@ function SectionWorkExperience() {
               <div>Dec 2022 - Now</div>
             </div>
             <div>
-              <div className={classNames('md:text-lg font-semibold', styles.title)}>
-                Web Application Engineer
-              </div>
-              <div className="text-accent">ReactJS, Typescript, MUI</div>
+              <div className={clsx('md:text-lg font-semibold')}>Web Application Engineer</div>
+              <div className="text-muted-foreground">ReactJS, Typescript, MUI</div>
             </div>
             <ul className="flex flex-col gap-2">
               <li>
@@ -58,29 +54,27 @@ function SectionWorkExperience() {
             <div>Apr 2020 - Sep 2022</div>
           </div>
           <div
-            className={classNames(
+            className={clsx(
               'col-span-3 md:col-span-2 flex flex-col gap-4 pl-10 md:pl-20 pb-20',
               'border-dashed border-l-2 border-secondary',
-              styles.job,
+              'relative',
             )}
           >
             <div
-              className={classNames(
+              className={clsx(
                 'bg-main border-2 border-dashed border-secondary rounded-full',
-                styles.dot,
+                'absolute -left-4 p-2',
               )}
             >
-              <div className="bg-blue-500" />
+              <div className="bg-blue-500 w-4 h-4 rounded-full" />
             </div>
             <div className="flex md:hidden flex-col">
               <div className="md:text-lg font-semibold">MyConstant, Ho Chi Minh city</div>
               <div>Apr 2020 - Sep 2022</div>
             </div>
             <div>
-              <div className={classNames('md:text-lg font-semibold', styles.title)}>
-                Frontend Developer
-              </div>
-              <div className="text-accent">
+              <div className={clsx('md:text-lg font-semibold')}>Frontend Developer</div>
+              <div className="text-muted-foreground">
                 ReactJS, Javascript/Typescript, web3.js, Bootstrap, ChakraUI
               </div>
             </div>
@@ -107,29 +101,27 @@ function SectionWorkExperience() {
             <div>Apr 2018 - Mar 2020</div>
           </div>
           <div
-            className={classNames(
+            className={clsx(
               'col-span-3 md:col-span-2 flex flex-col gap-4 pl-10 md:pl-20 pb-20',
               'border-dashed border-l-2 border-secondary',
-              styles.job,
+              'relative',
             )}
           >
             <div
-              className={classNames(
+              className={clsx(
                 'bg-main border-2 border-dashed border-secondary rounded-full',
-                styles.dot,
+                'absolute -left-4 p-2',
               )}
             >
-              <div className="bg-red-500" />
+              <div className="bg-red-500 w-4 h-4 rounded-full" />
             </div>
             <div className="flex md:hidden flex-col">
               <div className="md:text-lg font-semibold">Designveloper, Ho Chi Minh city</div>
               <div>Apr 2018 - Mar 2020</div>
             </div>
             <div>
-              <div className={classNames('md:text-lg font-semibold', styles.title)}>
-                Fullstack Developer
-              </div>
-              <div className="text-accent">
+              <div className={clsx('md:text-lg font-semibold')}>Fullstack Developer</div>
+              <div className="text-muted-foreground">
                 React, React Native, NodeJS, MongoDB, GraphQL, Docker
               </div>
             </div>
@@ -158,29 +150,29 @@ function SectionWorkExperience() {
             <div>Nov 2016 - Mar 2018</div>
           </div>
           <div
-            className={classNames(
+            className={clsx(
               'col-span-3 md:col-span-2 flex flex-col gap-4 pl-10 md:pl-20',
               'border-dashed border-l-2 border-secondary',
-              styles.job,
+              'relative',
             )}
           >
             <div
-              className={classNames(
+              className={clsx(
                 'bg-main border-2 border-dashed border-secondary rounded-full',
-                styles.dot,
+                'absolute -left-4 p-2',
               )}
             >
-              <div className="bg-gray-500" />
+              <div className="bg-gray-500 w-4 h-4 rounded-full" />
             </div>
             <div className="flex md:hidden flex-col">
               <div className="md:text-lg font-semibold">Nguyen Hiep Software, Ho Chi Minh city</div>
               <div>Nov 2016 - Mar 2018</div>
             </div>
             <div>
-              <div className={classNames('md:text-lg font-semibold', styles.title)}>
+              <div className={clsx('md:text-lg font-semibold')}>
                 Internship / Fullstack Developer
               </div>
-              <div className="text-accent">HTML/CSS, NodeJS, iOS, Android, MongoDB</div>
+              <div className="text-muted-foreground">HTML/CSS, NodeJS, iOS, Android, MongoDB</div>
             </div>
           </div>
         </div>

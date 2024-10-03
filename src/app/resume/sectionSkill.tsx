@@ -1,5 +1,5 @@
 import Section from '@/components/section'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import Image from 'next/image'
 import React from 'react'
 
@@ -127,7 +127,7 @@ function SectionSkill() {
         {Groups.map((group) => (
           <React.Fragment key={group.name}>
             <div
-              className={classNames(
+              className={clsx(
                 'col-span-1 md:col-span-6 xl:col-span-5',
                 'flex items-center gap-8 transition-all translate-y-2 p-4 lg:p-10',
                 'text-center rounded-3xl border-2 border-slate-200 bg-gray-50',
@@ -135,13 +135,13 @@ function SectionSkill() {
               )}
             >
               <div
-                className={classNames(
+                className={clsx(
                   'flex items-center justify-center rounded-full',
                   'w-10 h-10 md:w-16 md:h-16  lg:w-20 lg:h-20',
                   group.color,
                 )}
               >
-                <i className={classNames('bx md:text-4xl text-white', group.icon)} />
+                <i className={clsx('bx md:text-4xl text-white', group.icon)} />
               </div>
               <div className="text-left">
                 <h3 className="text-xl md:text-3xl font-semibold">{group.name}</h3>
@@ -149,7 +149,7 @@ function SectionSkill() {
               </div>
             </div>
             <div
-              className={classNames(
+              className={clsx(
                 'col-span-1 md:col-span-6 xl:col-span-7',
                 'w-full flex flex-wrap justify-center md:justify-start gap-x-10',
               )}
@@ -160,7 +160,7 @@ function SectionSkill() {
                   href={e.link}
                   target="_blank"
                   style={{ minWidth: 100 }}
-                  className={classNames(
+                  className={clsx(
                     'flex flex-col items-center gap-4',
                     'translate-y-2 transition-all p-4 rounded-lg cursor-pointer',
                     'hover:shadow-lg hover:translate-y-0 hover:border',

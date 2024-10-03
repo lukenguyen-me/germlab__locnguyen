@@ -1,5 +1,5 @@
+import clsx from 'clsx'
 import { ReactNode } from 'react'
-import classNames from 'classnames'
 
 interface SectionProps {
   className?: string
@@ -9,7 +9,7 @@ interface SectionProps {
 function Section(props: SectionProps) {
   const { className, children } = props
   return (
-    <section className={classNames(className)}>
+    <section className={clsx(className)}>
       <div className="max-w-7xl w-full px-10 xl:px-4 2xl:px-0 mx-auto">{children}</div>
     </section>
   )

@@ -1,20 +1,63 @@
+import Navbar from '@/components/navbar'
+import { ThemeProvider } from '@/components/theme-provider'
+import { TooltipProvider } from '@/components/ui/tooltip'
+import { DATA } from '@/data/resume'
+import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
-import { fontCaros } from '@/fonts'
-import classNames from 'classnames'
 import './globals.css'
+import { fontCaros } from '@/fonts'
 
 export const metadata: Metadata = {
-  title: 'Loc Nguyen Porfolio',
-  description: 'A programmer, freelancer, and indie hacker.',
+  metadataBase: new URL(DATA.url),
+  title: {
+    default: DATA.name,
+    template: `%s | ${DATA.name}`,
+  },
+  description: DATA.description,
+  openGraph: {
+    title: `${DATA.name}`,
+    description: DATA.description,
+    url: DATA.url,
+    siteName: `${DATA.name}`,
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  twitter: {
+    title: `${DATA.name}`,
+    card: 'summary_large_image',
+  },
+  verification: {
+    google: '',
+    yandex: '',
+  },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
-    <html lang="en">
-      <head>
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-      </head>
-      <body className={classNames(fontCaros.variable, 'font-sans text-primary')}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn('bg-background font-sans text-primary', fontCaros.variable)}>
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <TooltipProvider delayDuration={0}>
+            {children}
+            <Navbar />
+          </TooltipProvider>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
