@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import './globals.css'
 import { fontCaros } from '@/fonts'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
@@ -58,6 +59,7 @@ export default function RootLayout({
           </TooltipProvider>
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-YD0FBRJHF8" />
     </html>
   )
 }
