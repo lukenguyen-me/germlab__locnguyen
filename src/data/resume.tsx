@@ -113,6 +113,32 @@ export const DATA = {
   ],
   projects: [
     {
+      title: 'Pithy Point',
+      href: 'https://app.pithypoint.com',
+      dates: 'Sep 2024 - Present',
+      active: true,
+      description:
+        'A web app that simplifies slide creation, letting users focus purely on content without the hassle of styling. Create impactful presentations with ease and clarity.',
+      technologies: [
+        'Reactjs',
+        'Typescript',
+        'TailwindCSS',
+        'Shadcn',
+        'Node.js',
+        'Fastify',
+        'MongoDB',
+      ],
+      links: [
+        {
+          type: 'Website',
+          href: 'https://app.pithypoint.com',
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: '/images/demo_pithypoint.png',
+      video: '',
+    },
+    {
       title: 'PrepExam',
       href: 'https://prepexam.io',
       dates: 'May 2024 - Present',

@@ -16,10 +16,6 @@ const config: Config = {
         '2xl': '1400px',
       },
     },
-    fontFamily: {
-      sans: ['var(--font-caros)'],
-      mono: ['var(--font-roboto-mono)'],
-    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

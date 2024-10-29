@@ -1,3 +1,6 @@
+import { GeistSans } from 'geist/font/sans'
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 import Navbar from '@/components/navbar'
 import { ThemeProvider } from '@/components/theme-provider'
 import { TooltipProvider } from '@/components/ui/tooltip'
@@ -5,8 +8,6 @@ import { DATA } from '@/data/resume'
 import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import './globals.css'
-import { fontCaros } from '@/fonts'
-import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
@@ -50,8 +51,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn('bg-background font-sans text-primary', fontCaros.variable)}>
+    <html lang="en" suppressHydrationWarning className={GeistSans.className}>
+      <body className={cn('bg-background text-primary')}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}
