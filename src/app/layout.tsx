@@ -1,5 +1,4 @@
 import { GeistSans } from 'geist/font/sans'
-import { GoogleAnalytics } from '@next/third-parties/google'
 
 import Navbar from '@/components/navbar'
 import { ThemeProvider } from '@/components/theme-provider'
@@ -60,7 +59,6 @@ export default function RootLayout({
           </TooltipProvider>
         </ThemeProvider>
       </body>
-      <GoogleAnalytics gaId="G-YD0FBRJHF8" />
     </html>
   )
 }
